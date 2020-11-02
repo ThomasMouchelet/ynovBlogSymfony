@@ -32,6 +32,11 @@ class Article
      */
     private $createdAt;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="article")
+     */
+    private $category;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class Article
     public function setCreatedAt(\DateTimeInterface $createdAt): self
     {
         $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }
