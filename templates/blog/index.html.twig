@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BlogController!
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			{% for article in articles %}
+				<div class="col-md-3">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">{{article.title}}</h5>
+							<h6 class="card-subtitle mb-2 text-muted">{{article.createdAt | date("d/m/Y")}}</h6>
+							<p class="card-text">{{article.description}}</p>
+							<a href="/articles/{{article.id}}" class="card-link">Card link</a>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}

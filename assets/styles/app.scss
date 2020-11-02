@@ -1,0 +1,21 @@
+$primaryColor: blue;
+
+div {
+  .container {
+    .card {
+      background-color: $primaryColor;
+    }
+  }
+}
+
+.btn {
+  padding: 20px;
+  background-color: $primaryColor;
+  color: #fff;
+
+  &:hover {
+    background-color: transparent;
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
+  }
+}
