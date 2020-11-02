@@ -13,7 +13,7 @@ class ArticleFixtures extends Fixture
     {
         $faker = Factory::create('fr_FR');
 
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 20; $i++) {
             $article = new Article();
             $article->setTitle($faker->sentence($nbWords = 2, $variableNbWords = true))
                 ->setDescription($faker->sentence($nbWords = 10, $variableNbWords = true))
