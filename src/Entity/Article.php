@@ -34,6 +34,7 @@ class Article
 
     /**
      * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="article")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $category;
 

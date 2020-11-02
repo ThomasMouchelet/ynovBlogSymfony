@@ -36,7 +36,7 @@ class BlogController extends AbstractController
      */
     public function show(Article $article, Request $request)
     {
-        // dd($request);
+        // dd($request->get('id'));
 
         return $this->render('blog/show.html.twig', [
             'article' => $article
